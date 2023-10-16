@@ -49,7 +49,7 @@ const ouohoon = (function () {
   }
 
   /*
-    링크 생성하기
+    링크 html 생성하기
   */
   function createLinkElementHtml(node, uniqueId) {
     return `<p class="ouohoon-${node.localName}"><a href="#${uniqueId}">${node.innerText}</a></p>`;
@@ -116,7 +116,9 @@ const ouohoon = (function () {
   };
 })();
 
-$().ready(function () {
-  ouohoon.toc();
-  ouohoon.addStyle();
-});
+// 테스트 코드
+
+// $().ready(function () {
+//   ouohoon.toc();
+//   ouohoon.addStyle();
+// });
