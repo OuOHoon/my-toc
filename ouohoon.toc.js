@@ -16,6 +16,9 @@ const ouohoon = (function () {
     };
 
     const parsingData = parseContent(options.content, options.headings);
+    if (parsingData.size === 0) {
+      return null;
+    }
     const htmlString = toHtmlString(parsingData);
 
     $(options.content).prepend(htmlString);
